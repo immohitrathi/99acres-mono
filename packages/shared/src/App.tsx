@@ -20,11 +20,7 @@ export function App() {
           style={styles.scrollView}
         >
           <AppHeader />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
+
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>
@@ -32,11 +28,9 @@ export function App() {
               </Text>
               <Text style={styles.sectionDescription}>
                 Edit{' '}
-                <Text style={styles.highlight}>
-                  packages/components/App.tsx
-                </Text>{' '}
-                to change this screen and then come back to see your edits (in
-                the phone or the browser).
+                <Text style={styles.highlight}>packages/shared/App.tsx</Text> to
+                change this screen and then come back to see your edits (in the
+                phone or the browser).
               </Text>
             </View>
             <View style={styles.sectionContainer}>
@@ -102,7 +96,3 @@ const styles = StyleSheet.create({
     textAlign: 'right',
   },
 })
-
-declare let global: {
-  HermesInternal?: boolean
-}
